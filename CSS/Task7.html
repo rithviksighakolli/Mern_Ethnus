@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - 7</title>
+    <style>
+        body {
+            background-color: rgb(255, 0, 255);
+        }
+
+        #form {
+            margin: 0 20% 0 20%;
+            padding: 5%;
+            background-color: rgb(58, 20, 58);
+            color: white;
+            text-align: center;
+        }
+
+        input,
+        textarea,
+        select {
+            background-color: antiquewhite;
+            height: 2rem;
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        #reg {
+            margin-top: 30px;
+            width: 100%;
+            height: 2.5rem;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center">Task 7</h1>
+    <div id="form">
+        <h2>Registration form</h2>
+        <div>
+            <form action="#">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <td><input type="text" name="fname" placeholder="your name"></td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td><input type="email" name="mail" placeholder="your email"></td>
+                    </tr>
+                    <tr>
+                        <th>Password</th>
+                        <td><input type="password" name="pass"></td>
+                    </tr>
+                    <tr>
+                        <th>Phone Number</th>
+                        <td><input type="tel" name="phone"></td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Gender</th>
+                        <td><input type="radio" name="gender" value="male">Male</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="gender" value="female">Female</td>
+                    </tr>
+                    <tr>
+                        <th>Language</th>
+                        <td><select name="lang">
+                                <option value="eng">English</option>
+                                <option value="hin">Hindi</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <th>Zip Code</th>
+                        <td><input type="text" name="zip"></td>
+                    </tr>
+                    <tr>
+                        <th>About</th>
+                        <td><textarea name="about" placeholder="Write about yourself..."></textarea></td>
+                    </tr>
+                </table>
+                <button onclick="submission()" id="reg">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

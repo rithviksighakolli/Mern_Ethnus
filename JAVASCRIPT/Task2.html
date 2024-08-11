@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task2</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Alphabetical Order</h1>
+        <input type="text" id="typeInput" placeholder="Enter text">
+        <button onclick="press()">Convert</button>
+        <h1>Expected Output:</h1>
+        <div id="answer" class="result"></div>
+    </div>
+    <script>
+        function press() {
+            let a = document.getElementById('typeInput').value;
+            function sortString(a) {
+                return a.split('').sort().join('');
+            }
+            document.getElementById("answer").innerHTML = sortString(a);
+        }
+    </script>
+</body>
+</html>

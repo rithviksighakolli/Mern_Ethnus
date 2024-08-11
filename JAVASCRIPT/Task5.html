@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Task5</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      input:invalid,
+      textarea:invalid {
+        border-color: red;
+      }
+      .error {
+        color: red;
+        display: none;
+      }
+      input:invalid + .error,
+      textarea:invalid + .error {
+        display: block;
+      }
+      input[type="submit"] {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      input[type="submit"]:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form onsubmit="validateForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <span id="nameError" class="error">This field is required</span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <span id="emailError" class="error"
+          >A valid email address is required</span
+        >
+
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website" required />
+        <span id="websiteError" class="error">A valid URL is required</span>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <span id="messageError" class="error">This field is required</span>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+        const formElements = document.querySelectorAll("input, textarea");
+        formElements.forEach((element) => {
+          const errorElement = document.getElementById(element.name + "Error");
+          if (!element.checkValidity()) {
+            errorElement.style.display = "block";
+          } else {
+            errorElement.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - 2</title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        #vnav {
+            margin: 3%;
+            width: max-content;
+            font-size: larger;
+            line-height: 2rem;
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(139, 204, 232);
+        }
+
+        #vnav a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        #vnav a:hover {
+            background-color: orange;
+            color: white;
+        }
+
+        #hnav {
+            margin: 3%;
+            width: max-content;
+            display: flex;
+            font-size: larger;
+            flex-direction: row;
+            background-color: rgb(193, 190, 190);
+        }
+
+        #hnav a {
+            color: blue;
+            text-decoration: none;
+            margin-right: 1.5rem;
+        }
+
+        #hnav a:hover {
+            background-color: grey;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Task 2</h1>
+    <div class="main">
+        <div> Vertical Navigation Bar
+            <div id="vnav">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Home</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">Java</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">HTML</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">CSS</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">Bootstrap</a>
+            </div>
+        </div>
+        <div>Horizontal Navigation Bar
+            <div id="hnav">
+                <a href="http://" target="_blank" rel="noopener noreferrer">Home</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">Java</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">HTML</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">CSS</a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">Bootstrap</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
